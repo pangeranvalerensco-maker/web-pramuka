@@ -1,9 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-  <title>Belajar Git</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kwartir Cabang Gerakan Pramuka Kota Sibolga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
-  <h1>Hello Git</h1>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="#1a5f23" stroke-width="4"/>
+                        <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                        <circle cx="30" cy="30" r="8" fill="#1a5f23"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                    <span>Kota Sibolga</span>
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html" class="nav-link">Kegiatan</a></li>
+                    <li><a href="struktur.html" class="nav-link">Struktur</a></li>
+                    <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                    <li><a href="berita.html" class="nav-link">Berita</a></li>
+                    <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="nav-link"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2>Satya Ku Dharmakan, Dharma Ku Baktikan</h2>
+                <p>Selamat datang di website resmi Kwartir Cabang Gerakan Pramuka Kota Sibolga. Wadah pembinaan dan pengembangan generasi muda yang berkarakter, mandiri, dan bertanggung jawab berdasarkan Tri Satya dan Dasa Darma Pramuka.</p>
+                <a href="tentang.html" class="btn">Tentang Kami</a>
+                <a href="kegiatan.html" class="btn btn-secondary">Kegiatan Pramuka</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Tentang Kwartir Cabang Sibolga</h2>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="https://images.unsplash.com/photo-1587502536575-6dfba0a6e017?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Kegiatan Pramuka">
+                    </div>
+                    <div class="about-text">
+                        <h3>Membina Generasi Muda Berkarakter</h3>
+                        <p>Kwartir Cabang Gerakan Pramuka Kota Sibolga merupakan organisasi pendidikan nonformal yang menyelenggarakan pendidikan kepanduan di Indonesia sebagai bagian dari gerakan pendidikan nasional.</p>
+                        <p>Kami berkomitmen untuk membina generasi muda Kota Sibolga agar memiliki iman dan takwa, berkarakter, mandiri, sehat jasmani dan rohani, serta peduli terhadap lingkungan dan sesama.</p>
+                        <p>Melalui berbagai kegiatan kepramukaan yang menarik dan mendidik, kami membantu peserta didik mengembangkan potensi diri secara optimal.</p>
+                        <a href="tentang.html" class="btn">Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section activities">
+            <div class="container">
+                <h2 class="section-title">Kegiatan Terbaru</h2>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Perkemahan">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Perkemahan Sabtu-Minggu (Persami)</h3>
+                            <p>Kegiatan perkemahan reguler setiap bulan untuk melatih kemandirian dan keterampilan kepramukaan.</p>
+                            <a href="kegiatan.html" class="btn btn-small">Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1587502537104-aac10f5fb6f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Peringatan Hari Pramuka">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Peringatan Hari Pramuka ke-62</h3>
+                            <p>Upacara dan berbagai lomba dalam rangka memperingati Hari Pramuka ke-62 tingkat Kota Sibolga.</p>
+                            <a href="kegiatan.html" class="btn btn-small">Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Pelatihan">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Pelatihan Pramuka Garuda</h3>
+                            <p>Program pembinaan untuk mencapai tingkatan tertinggi dalam kepramukaan yaitu Pramuka Garuda.</p>
+                            <a href="kegiatan.html" class="btn btn-small">Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Berita Terkini</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Berita 1">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">15 Agustus 2023</span>
+                            <h3>Pramuka Sibolga Raih Prestasi di Jambore Daerah</h3>
+                            <p>Kontingen Pramuka Kota Sibolga meraih 3 medali emas dan 2 perak dalam Jambore Daerah Sumatera Utara 2023.</p>
+                            <a href="berita.html" class="btn btn-small">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Berita 2">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">5 Agustus 2023</span>
+                            <h3>Pelantikan Pengurus Baru Kwartir Cabang</h3>
+                            <p>Kwartir Cabang Gerakan Pramuka Kota Sibolga melantik pengurus baru untuk periode kepengurusan 2023-2028.</p>
+                            <a href="berita.html" class="btn btn-small">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-img">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Berita 3">
+                        </div>
+                        <div class="news-content">
+                            <span class="news-date">28 Juli 2023</span>
+                            <h3>Gerakan Pramuka Sibolga Gelar Bakti Sosial</h3>
+                            <p>Sebagai bentuk kepedulian sosial, Pramuka Sibolga mengadakan bakti sosial di beberapa titik wilayah kota.</p>
+                            <a href="berita.html" class="btn btn-small">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="28" stroke="#f8b739" stroke-width="4"/>
+                                <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                                <circle cx="30" cy="30" r="8" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                            <span>Kota Sibolga</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">Membina generasi muda Kota Sibolga yang berkarakter, mandiri, dan bertanggung jawab berdasarkan Tri Satya dan Dasa Darma Pramuka.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kegiatan.html">Kegiatan</a></li>
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Diponegoro No. 12, Kota Sibolga, Sumatera Utara</p>
+                    <p><i class="fas fa-phone"></i> (0631) 22345</p>
+                    <p><i class="fas fa-envelope"></i> kwarcab@sibolgapramuka.id</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00 WIB</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kwartir Cabang Gerakan Pramuka Kota Sibolga. All rights reserved.</p>
+                <p>Dibuat dengan semangat Pramuka untuk kemajuan generasi muda Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
