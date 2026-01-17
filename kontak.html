@@ -1,84 +1,253 @@
-<main>
-    <div class="page-header">
-        <div class="container">
-            <h1>Kontak Kami</h1>
-            <p>Hubungi Kwartir Cabang Gerakan Pramuka Kota Sibolga</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Kwartir Cabang Gerakan Pramuka Kota Sibolga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="#1a5f23" stroke-width="4"/>
+                        <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                        <circle cx="30" cy="30" r="8" fill="#1a5f23"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                    <span>Kota Sibolga</span>
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html" class="nav-link">Kegiatan</a></li>
+                    <li><a href="struktur.html" class="nav-link">Struktur</a></li>
+                    <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                    <li><a href="berita.html" class="nav-link">Berita</a></li>
+                    <li><a href="kontak.html" class="nav-link active">Kontak</a></li>
+                    <li><a href="login.html" class="nav-link"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    
-    <div class="page-content">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Informasi Kontak</h3>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Kontak Kami</h1>
+                <p>Hubungi Kwartir Cabang Gerakan Pramuka Kota Sibolga</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informasi Kontak</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Alamat Kantor</h4>
+                                <p>Jl. Diponegoro No. 12, Kota Sibolga<br>Sumatera Utara 22533</p>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Alamat Kantor</h4>
-                            <p>Jl. Diponegoro No. 12, Kota Sibolga<br>Sumatera Utara 22533</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>(0631) 22345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>kwarcab@sibolgapramuka.id</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4>Jam Operasional</h4>
+                                <p>Senin - Kamis: 08:00 - 16:00 WIB<br>Jumat: 08:00 - 11:30 WIB<br>Sabtu - Minggu: Libur</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <div>
+                                <h4>Peta Lokasi</h4>
+                                <div id="map" style="height: 200px; width: 100%; margin-top: 10px; background-color: #f5f5f5; border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center;">
+                                    <p style="text-align: center; color: var(--text-light);">
+                                        <i class="fas fa-map-marked-alt" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
+                                        Peta Lokasi Kantor<br>
+                                        <small>(Integrasi Google Maps dapat ditambahkan)</small>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div>
-                            <h4>Telepon</h4>
-                            <p>(0631) 22345</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>kwarcab@sibolgapramuka.id</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div>
-                            <h4>Jam Operasional</h4>
-                            <p>Senin - Kamis: 08:00 - 16:00 WIB<br>Jumat: 08:00 - 11:30 WIB<br>Sabtu - Minggu: Libur</p>
-                        </div>
+                    <div class="contact-form">
+                        <h3>Kirim Pesan</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nama Lengkap</label>
+                                <input type="text" id="name" class="form-control" placeholder="Masukkan nama lengkap" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="Masukkan alamat email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">No. Telepon</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="Masukkan nomor telepon">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subjek</label>
+                                <select id="subject" class="form-control" required>
+                                    <option value="" disabled selected>Pilih subjek pesan</option>
+                                    <option value="informasi">Informasi Umum</option>
+                                    <option value="kegiatan">Informasi Kegiatan</option>
+                                    <option value="pendaftaran">Pendaftaran Anggota</option>
+                                    <option value="kerja-sama">Peluang Kerja Sama</option>
+                                    <option value="lainnya">Lainnya</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Pesan</label>
+                                <textarea id="message" class="form-control" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn">Kirim Pesan</button>
+                        </form>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3>Kirim Pesan</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nama Lengkap</label>
-                            <input type="text" id="name" class="form-control" placeholder="Masukkan nama lengkap" required>
+                <!-- Kontak Penting -->
+                <div style="margin-top: 80px;">
+                    <h2 class="section-title">Kontak Penting</h2>
+                    <div class="activities-grid">
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>Bidang Pembinaan Anggota Muda</h3>
+                                <p><i class="fas fa-user"></i> Hj. Siti Aminah, S.Pd.</p>
+                                <p><i class="fas fa-phone"></i> 0812-3456-7890</p>
+                                <p><i class="fas fa-envelope"></i> anggota.muda@sibolgapramuka.id</p>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="Masukkan alamat email" required>
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>Bidang Humas dan Kemitraan</h3>
+                                <p><i class="fas fa-user"></i> Ir. H. Muhammad Arifin</p>
+                                <p><i class="fas fa-phone"></i> 0813-4567-8901</p>
+                                <p><i class="fas fa-envelope"></i> humas@sibolgapramuka.id</p>
+                            </div>
                         </div>
                         
-                        <div class="form-group">
-                            <label for="subject">Subjek</label>
-                            <input type="text" id="subject" class="form-control" placeholder="Subjek pesan" required>
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>Bidang Organisasi dan Kelembagaan</h3>
+                                <p><i class="fas fa-user"></i> Drs. Budi Santoso</p>
+                                <p><i class="fas fa-phone"></i> 0821-2345-6789</p>
+                                <p><i class="fas fa-envelope"></i> organisasi@sibolgapramuka.id</p>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Pesan</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Tulis pesan Anda" required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Kirim Pesan</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="28" stroke="#f8b739" stroke-width="4"/>
+                                <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                                <circle cx="30" cy="30" r="8" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                            <span>Kota Sibolga</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">Membina generasi muda Kota Sibolga yang berkarakter, mandiri, dan bertanggung jawab berdasarkan Tri Satya dan Dasa Darma Pramuka.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kegiatan.html">Kegiatan</a></li>
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Diponegoro No. 12, Kota Sibolga, Sumatera Utara</p>
+                    <p><i class="fas fa-phone"></i> (0631) 22345</p>
+                    <p><i class="fas fa-envelope"></i> kwarcab@sibolgapramuka.id</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00 WIB</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kwartir Cabang Gerakan Pramuka Kota Sibolga. All rights reserved.</p>
+                <p>Dibuat dengan semangat Pramuka untuk kemajuan generasi muda Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

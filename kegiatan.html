@@ -1,30 +1,285 @@
-<!-- Ganti bagian main pada template -->
-<main>
-    <div class="page-header">
-        <div class="container">
-            <h1>Kegiatan Pramuka</h1>
-            <p>Berbagai aktivitas dan program pembinaan kepramukaan di Kota Sibolga</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kegiatan - Kwartir Cabang Gerakan Pramuka Kota Sibolga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="#1a5f23" stroke-width="4"/>
+                        <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                        <circle cx="30" cy="30" r="8" fill="#1a5f23"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                    <span>Kota Sibolga</span>
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html" class="nav-link active">Kegiatan</a></li>
+                    <li><a href="struktur.html" class="nav-link">Struktur</a></li>
+                    <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                    <li><a href="berita.html" class="nav-link">Berita</a></li>
+                    <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="nav-link"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    
-    <div class="page-content">
-        <div class="container">
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <div class="activity-img">
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Perkemahan">
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Kegiatan Pramuka</h1>
+                <p>Berbagai aktivitas dan program pembinaan kepramukaan di Kota Sibolga</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Perkemahan">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Perkemahan Sabtu-Minggu (Persami)</h3>
+                            <p>Kegiatan perkemahan reguler setiap bulan untuk melatih kemandirian dan keterampilan kepramukaan.</p>
+                            <p><strong>Waktu:</strong> Setiap bulan</p>
+                            <p><strong>Peserta:</strong> Seluruh tingkatan (Siaga, Penggalang, Penegak)</p>
+                            <a href="#" class="btn btn-small" onclick="registerForActivity(1)">Daftar Sekarang</a>
+                        </div>
                     </div>
-                    <div class="activity-content">
-                        <h3>Perkemahan Sabtu-Minggu (Persami)</h3>
-                        <p>Kegiatan perkemahan reguler setiap bulan untuk melatih kemandirian dan keterampilan kepramukaan.</p>
-                        <p><strong>Waktu:</strong> Setiap bulan</p>
-                        <p><strong>Peserta:</strong> Seluruh tingkatan (Siaga, Penggalang, Penegak)</p>
-                        <a href="#" class="btn btn-small" onclick="registerForActivity(1)">Daftar Sekarang</a>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1587502536575-6dfba0a6e017?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Jambore">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Jambore Cabang</h3>
+                            <p>Perkemahan besar pramuka penggalang se-Kota Sibolga yang diadakan setiap 3 tahun sekali.</p>
+                            <p><strong>Waktu:</strong> Setiap 3 tahun</p>
+                            <p><strong>Peserta:</strong> Pramuka Penggalang</p>
+                            <a href="#" class="btn btn-small" onclick="registerForActivity(2)">Info Lebih Lanjut</a>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Pelatihan">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Pelatihan Pramuka Garuda</h3>
+                            <p>Program pembinaan untuk mencapai tingkatan tertinggi dalam kepramukaan yaitu Pramuka Garuda.</p>
+                            <p><strong>Waktu:</strong> Setiap 6 bulan</p>
+                            <p><strong>Peserta:</strong> Pramuka Penegak dan Pandega</p>
+                            <a href="#" class="btn btn-small" onclick="registerForActivity(3)">Daftar Sekarang</a>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1587502537104-aac10f5fb6f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Hari Pramuka">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Peringatan Hari Pramuka</h3>
+                            <p>Upacara dan berbagai lomba dalam rangka memperingati Hari Pramuka setiap 14 Agustus.</p>
+                            <p><strong>Waktu:</strong> 14 Agustus setiap tahun</p>
+                            <p><strong>Peserta:</strong> Seluruh anggota pramuka</p>
+                            <a href="#" class="btn btn-small" onclick="registerForActivity(4)">Info Lebih Lanjut</a>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Bakti Sosial">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Bakti Sosial Masyarakat</h3>
+                            <p>Kegiatan gotong royong dan bakti sosial untuk membantu masyarakat sekitar.</p>
+                            <p><strong>Waktu:</strong> Setiap 3 bulan</p>
+                            <p><strong>Peserta:</strong> Seluruh anggota pramuka</p>
+                            <a href="#" class="btn btn-small" onclick="registerForActivity(5)">Daftar Sekarang</a>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-img">
+                            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Lomba">
+                        </div>
+                        <div class="activity-content">
+                            <h3>Lomba Tingkat Cabang</h3>
+                            <p>Berbagai lomba kepramukaan untuk mengasah keterampilan dan kreativitas anggota.</p>
+                            <p><strong>Waktu:</strong> Setiap 6 bulan</p>
+                            <p><strong>Peserta:</strong> Seluruh tingkatan</p>
+                            <a href="#" class="btn btn-small" onclick="registerForActivity(6)">Info Lebih Lanjut</a>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- Tambahkan lebih banyak activity-card sesuai kebutuhan -->
+                <!-- Jadwal Kegiatan -->
+                <div style="margin-top: 80px;">
+                    <h2 class="section-title">Jadwal Kegiatan 2023</h2>
+                    <div style="overflow-x: auto; margin-top: 30px;">
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kegiatan</th>
+                                    <th>Tanggal</th>
+                                    <th>Tempat</th>
+                                    <th>Peserta</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Persami Bulanan</td>
+                                    <td>Setiap akhir pekan ke-2</td>
+                                    <td>Bumi Perkemahan Sibolga</td>
+                                    <td>Penggalang & Penegak</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Pelatihan Pramuka Garuda</td>
+                                    <td>15-17 September 2023</td>
+                                    <td>Wisma Pramuka Sibolga</td>
+                                    <td>Penegak & Pandega</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Lomba Tingkat Cabang</td>
+                                    <td>21-23 Oktober 2023</td>
+                                    <td>Lapangan Merdeka Sibolga</td>
+                                    <td>Semua Tingkat</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Bakti Sosial</td>
+                                    <td>11 November 2023</td>
+                                    <td>Pesisir Pantai Sibolga</td>
+                                    <td>Semua Anggota</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Perkemahan Akhir Tahun</td>
+                                    <td>26-28 Desember 2023</td>
+                                    <td>Bumi Perkemahan Sibolga</td>
+                                    <td>Penggalang & Penegak</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="28" stroke="#f8b739" stroke-width="4"/>
+                                <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                                <circle cx="30" cy="30" r="8" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                            <span>Kota Sibolga</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">Membina generasi muda Kota Sibolga yang berkarakter, mandiri, dan bertanggung jawab berdasarkan Tri Satya dan Dasa Darma Pramuka.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kegiatan.html">Kegiatan</a></li>
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Diponegoro No. 12, Kota Sibolga, Sumatera Utara</p>
+                    <p><i class="fas fa-phone"></i> (0631) 22345</p>
+                    <p><i class="fas fa-envelope"></i> kwarcab@sibolgapramuka.id</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00 WIB</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kwartir Cabang Gerakan Pramuka Kota Sibolga. All rights reserved.</p>
+                <p>Dibuat dengan semangat Pramuka untuk kemajuan generasi muda Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .schedule-table th, .schedule-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .schedule-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .schedule-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .schedule-table tr:hover {
+            background-color: var(--light-color);
+        }
+    </style>
+</body>
+</html>

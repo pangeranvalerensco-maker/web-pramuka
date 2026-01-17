@@ -1,41 +1,230 @@
-<main>
-    <div class="page-header">
-        <div class="container">
-            <h1>Login Admin</h1>
-            <p>Halaman login untuk pengurus dan administrator website</p>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Kwartir Cabang Gerakan Pramuka Kota Sibolga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="#1a5f23" stroke-width="4"/>
+                        <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                        <circle cx="30" cy="30" r="8" fill="#1a5f23"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                    <span>Kota Sibolga</span>
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html" class="nav-link">Kegiatan</a></li>
+                    <li><a href="struktur.html" class="nav-link">Struktur</a></li>
+                    <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                    <li><a href="berita.html" class="nav-link">Berita</a></li>
+                    <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="nav-link active"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-    
-    <div class="page-content">
-        <div class="container">
-            <div class="login-container">
-                <h2>Masuk ke Sistem</h2>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" class="form-control" placeholder="Masukkan username" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" class="form-control" placeholder="Masukkan password" required>
-                    </div>
-                    
-                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
-                        <div>
-                            <input type="checkbox" id="remember">
-                            <label for="remember" style="display: inline; margin-left: 5px;">Ingat saya</label>
-                        </div>
-                        <a href="#" style="color: var(--primary-color);">Lupa password?</a>
-                    </div>
-                    
-                    <button type="submit" class="btn" style="width: 100%;">Login</button>
-                    
-                    <div style="text-align: center; margin-top: 20px;">
-                        <p>Belum punya akun? <a href="kontak.html" style="color: var(--primary-color);">Hubungi Administrator</a></p>
-                    </div>
-                </form>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Login Admin</h1>
+                <p>Halaman login untuk pengurus dan administrator website</p>
             </div>
         </div>
-    </div>
-</main>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="login-container">
+                    <h2>Masuk ke Sistem</h2>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username" class="form-control" placeholder="Masukkan username" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control" placeholder="Masukkan password" required>
+                        </div>
+                        
+                        <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <input type="checkbox" id="remember">
+                                <label for="remember" style="display: inline; margin-left: 5px;">Ingat saya</label>
+                            </div>
+                            <a href="#" style="color: var(--primary-color);" onclick="showForgotPassword()">Lupa password?</a>
+                        </div>
+                        
+                        <button type="submit" class="btn" style="width: 100%;">Login</button>
+                        
+                        <div style="text-align: center; margin-top: 20px;">
+                            <p>Belum punya akun? <a href="kontak.html" style="color: var(--primary-color);">Hubungi Administrator</a></p>
+                        </div>
+                    </form>
+                    
+                    <!-- Forgot Password Form (hidden by default) -->
+                    <div id="forgotPassword" style="display: none; margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;">
+                        <h3>Reset Password</h3>
+                        <form id="resetPasswordForm">
+                            <div class="form-group">
+                                <label for="resetEmail">Email Terdaftar</label>
+                                <input type="email" id="resetEmail" class="form-control" placeholder="Masukkan email yang terdaftar" required>
+                            </div>
+                            <button type="submit" class="btn">Kirim Link Reset</button>
+                            <button type="button" class="btn btn-secondary" style="margin-left: 10px;" onclick="hideForgotPassword()">Batal</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Informasi Login -->
+                <div style="max-width: 800px; margin: 50px auto 0; text-align: center;">
+                    <h3>Akses Login Berdasarkan Peran</h3>
+                    <div class="activities-grid" style="margin-top: 30px;">
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>Administrator</h3>
+                                <p>Akses penuh untuk mengelola seluruh konten website, data anggota, dan sistem.</p>
+                                <p><strong>Fitur:</strong> CRUD lengkap, manajemen user, backup data</p>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>Pengurus</h3>
+                                <p>Akses untuk mengelola konten, kegiatan, dan data anggota sesuai bidangnya.</p>
+                                <p><strong>Fitur:</strong> Input berita, kelola kegiatan, data anggota</p>
+                            </div>
+                        </div>
+                        
+                        <div class="activity-card">
+                            <div class="activity-content">
+                                <h3>Anggota</h3>
+                                <p>Akses terbatas untuk melihat data pribadi, mendaftar kegiatan, dan berinteraksi.</p>
+                                <p><strong>Fitur:</strong> Profil pribadi, pendaftaran, riwayat kegiatan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background-color: var(--light-color); padding: 20px; border-radius: var(--border-radius); margin-top: 40px;">
+                        <h4><i class="fas fa-info-circle"></i> Informasi Keamanan</h4>
+                        <p style="text-align: left; margin-top: 15px;">
+                            <i class="fas fa-shield-alt" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Pastikan Anda logout setelah selesai menggunakan sistem, terutama jika menggunakan komputer bersama.
+                        </p>
+                        <p style="text-align: left; margin-top: 10px;">
+                            <i class="fas fa-lock" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Jangan berikan username dan password Anda kepada siapapun.
+                        </p>
+                        <p style="text-align: left; margin-top: 10px;">
+                            <i class="fas fa-key" style="color: var(--primary-color); margin-right: 10px;"></i>
+                            Ganti password secara berkala untuk menjaga keamanan akun Anda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="28" stroke="#f8b739" stroke-width="4"/>
+                                <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                                <circle cx="30" cy="30" r="8" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                            <span>Kota Sibolga</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">Membina generasi muda Kota Sibolga yang berkarakter, mandiri, dan bertanggung jawab berdasarkan Tri Satya dan Dasa Darma Pramuka.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kegiatan.html">Kegiatan</a></li>
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Diponegoro No. 12, Kota Sibolga, Sumatera Utara</p>
+                    <p><i class="fas fa-phone"></i> (0631) 22345</p>
+                    <p><i class="fas fa-envelope"></i> kwarcab@sibolgapramuka.id</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00 WIB</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kwartir Cabang Gerakan Pramuka Kota Sibolga. All rights reserved.</p>
+                <p>Dibuat dengan semangat Pramuka untuk kemajuan generasi muda Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function showForgotPassword() {
+            document.getElementById('forgotPassword').style.display = 'block';
+        }
+        
+        function hideForgotPassword() {
+            document.getElementById('forgotPassword').style.display = 'none';
+        }
+        
+        // Handle reset password form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const resetPasswordForm = document.getElementById('resetPasswordForm');
+            if (resetPasswordForm) {
+                resetPasswordForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Link reset password telah dikirim ke email Anda. Silakan cek inbox atau folder spam.');
+                    hideForgotPassword();
+                    resetPasswordForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

@@ -167,3 +167,153 @@ async function fetchActivities() {
         console.error('Error fetching activities:', error);
     }
 }
+
+// Tambahkan kode berikut di akhir file script.js
+
+// Form validation for registration
+function registerForActivity(activityId) {
+    const activityName = document.querySelector(`[onclick="registerForActivity(${activityId})"]`).closest('.activity-content').querySelector('h3').textContent;
+    
+    const modalHTML = `
+        <div id="registrationModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 10001;">
+            <div style="background: white; padding: 30px; border-radius: var(--border-radius); max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="margin: 0;">Pendaftaran Kegiatan</h3>
+                    <button onclick="closeModal()" style="background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-light);">&times;</button>
+                </div>
+                <p><strong>Kegiatan:</strong> ${activityName}</p>
+                <form id="activityRegistrationForm">
+                    <div class="form-group">
+                        <label for="regName">Nama Lengkap</label>
+                        <input type="text" id="regName" class="form-control" placeholder="Masukkan nama lengkap" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regEmail">Email</label>
+                        <input type="email" id="regEmail" class="form-control" placeholder="Masukkan alamat email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regPhone">No. Telepon/WhatsApp</label>
+                        <input type="tel" id="regPhone" class="form-control" placeholder="Masukkan nomor telepon" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regGudep">Gugus Depan</label>
+                        <input type="text" id="regGudep" class="form-control" placeholder="Contoh: 01.001-01.002" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="regMessage">Pesan/Keterangan</label>
+                        <textarea id="regMessage" class="form-control" rows="3" placeholder="Tulis pesan atau keterangan tambahan"></textarea>
+                    </div>
+                    
+                    <div style="display: flex; gap: 10px;">
+                        <button type="submit" class="btn">Daftar Sekarang</button>
+                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Batal</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', modalHTML);
+    
+    // Handle form submission
+    document.getElementById('activityRegistrationForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Pendaftaran berhasil! Anda akan menerima konfirmasi via email/WhatsApp dalam waktu 1x24 jam.');
+        closeModal();
+    });
+}
+
+function closeModal() {
+    const modal = document.getElementById('registrationModal');
+    if (modal) {
+        modal.remove();
+    }
+}
+
+// Newsletter subscription
+function subscribeNewsletter() {
+    const email = document.getElementById('newsletterEmail');
+    if (email && email.value) {
+        alert('Terima kasih telah berlangganan newsletter kami!');
+        email.value = '';
+    }
+}
+
+// Initialize any tooltips
+function initTooltips() {
+    const tooltips = document.querySelectorAll('.tooltip');
+    tooltips.forEach(tooltip => {
+        tooltip.addEventListener('mouseenter', function() {
+            // Tooltip functionality is handled by CSS
+        });
+    });
+}
+
+// Countdown to next major event
+function initEventCountdown() {
+    // Example: Countdown to next Hari Pramuka (August 14)
+    const nextPramukaDay = new Date(new Date().getFullYear(), 7, 14); // August is month 7 (0-indexed)
+    if (nextPramukaDay < new Date()) {
+        nextPramukaDay.setFullYear(nextPramukaDay.getFullYear() + 1);
+    }
+    
+    const countdownElement = document.getElementById('eventCountdown');
+    if (countdownElement) {
+        updateCountdown(nextPramukaDay, countdownElement);
+        setInterval(() => updateCountdown(nextPramukaDay, countdownElement), 1000);
+    }
+}
+
+function updateCountdown(targetDate, element) {
+    const now = new Date().getTime();
+    const distance = targetDate.getTime() - now;
+    
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    element.innerHTML = `
+        <div style="display: flex; gap: 10px; justify-content: center;">
+            <div style="text-align: center;">
+                <div style="background: var(--primary-color); color: white; padding: 10px; border-radius: 5px; font-weight: bold; font-size: 1.5rem;">${days}</div>
+                <div style="font-size: 0.8rem; margin-top: 5px;">Hari</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="background: var(--primary-color); color: white; padding: 10px; border-radius: 5px; font-weight: bold; font-size: 1.5rem;">${hours}</div>
+                <div style="font-size: 0.8rem; margin-top: 5px;">Jam</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="background: var(--primary-color); color: white; padding: 10px; border-radius: 5px; font-weight: bold; font-size: 1.5rem;">${minutes}</div>
+                <div style="font-size: 0.8rem; margin-top: 5px;">Menit</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="background: var(--primary-color); color: white; padding: 10px; border-radius: 5px; font-weight: bold; font-size: 1.5rem;">${seconds}</div>
+                <div style="font-size: 0.8rem; margin-top: 5px;">Detik</div>
+            </div>
+        </div>
+    `;
+}
+
+// Initialize additional functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    initTooltips();
+    initEventCountdown();
+    
+    // Add active class to current page in navigation
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href');
+        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});

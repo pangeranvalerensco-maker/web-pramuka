@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri - Kwartir Cabang Gerakan Pramuka Kota Sibolga</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .gallery-controls {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .gallery-controls .btn-small {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-img">
+                    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="30" cy="30" r="28" stroke="#1a5f23" stroke-width="4"/>
+                        <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                        <circle cx="30" cy="30" r="8" fill="#1a5f23"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                    <span>Kota Sibolga</span>
+                </div>
+            </div>
+            
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Beranda</a></li>
+                    <li><a href="tentang.html" class="nav-link">Tentang Kami</a></li>
+                    <li><a href="kegiatan.html" class="nav-link">Kegiatan</a></li>
+                    <li><a href="struktur.html" class="nav-link">Struktur</a></li>
+                    <li><a href="galeri.html" class="nav-link active">Galeri</a></li>
+                    <li><a href="berita.html" class="nav-link">Berita</a></li>
+                    <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+                    <li><a href="login.html" class="nav-link"><i class="fas fa-user"></i> Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="page-header">
+            <div class="container">
+                <h1>Galeri Kegiatan</h1>
+                <p>Dokumentasi kegiatan kepramukaan Kwartir Cabang Kota Sibolga</p>
+            </div>
+        </div>
+        
+        <div class="page-content">
+            <div class="container">
+                <div class="gallery-controls">
+                    <button class="btn btn-small filter-btn active" data-filter="all">Semua</button>
+                    <button class="btn btn-secondary btn-small filter-btn" data-filter="perkemahan">Perkemahan</button>
+                    <button class="btn btn-secondary btn-small filter-btn" data-filter="lomba">Lomba</button>
+                    <button class="btn btn-secondary btn-small filter-btn" data-filter="pelatihan">Pelatihan</button>
+                    <button class="btn btn-secondary btn-small filter-btn" data-filter="sosial">Bakti Sosial</button>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item" data-category="perkemahan">
+                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kegiatan Perkemahan">
+                        <div class="gallery-overlay">
+                            <h4>Perkemahan Sabtu-Minggu</h4>
+                            <p>Persami Bulanan di Bumi Perkemahan Sibolga</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="lomba">
+                        <img src="https://images.unsplash.com/photo-1587502537104-aac10f5fb6f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kegiatan Lomba">
+                        <div class="gallery-overlay">
+                            <h4>Lomba Pionering</h4>
+                            <p>Lomba Tingkat Cabang 2023</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="pelatihan">
+                        <img src="https://images.unsplash.com/photo-1591035897819-f4bdf739f446?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pelatihan">
+                        <div class="gallery-overlay">
+                            <h4>Pelatihan Pramuka Garuda</h4>
+                            <p>Sesi Pelatihan Keterampilan Khusus</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="sosial">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bakti Sosial">
+                        <div class="gallery-overlay">
+                            <h4>Bakti Sosial</h4>
+                            <p>Membersihkan Pantai Sibolga</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="perkemahan">
+                        <img src="https://images.unsplash.com/photo-1587502536575-6dfba0a6e017?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jambore">
+                        <div class="gallery-overlay">
+                            <h4>Jambore Cabang</h4>
+                            <p>Pembukaan Jambore Cabang 2022</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="lomba">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lomba">
+                        <div class="gallery-overlay">
+                            <h4>Lomba Baris Berbaris</h4>
+                            <p>Final LBB Tingkat Penggalang</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="pelatihan">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pelatihan">
+                        <div class="gallery-overlay">
+                            <h4>Pelatihan Pembina</h4>
+                            <p>Workshop Metode Kepramukaan</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="sosial">
+                        <img src="https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sosial">
+                        <div class="gallery-overlay">
+                            <h4>Donasi Bencana</h4>
+                            <p>Pengumpulan Bantuan untuk Korban Bencana</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="perkemahan">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Perkemahan">
+                        <div class="gallery-overlay">
+                            <h4>Api Unggun</h4>
+                            <p>Malam Api Unggun di Perkemahan</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="lomba">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lomba">
+                        <div class="gallery-overlay">
+                            <h4>Lomba PBB</h4>
+                            <p>Lomba Baris Berbaris Tingkat Kota</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="pelatihan">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pelatihan">
+                        <div class="gallery-overlay">
+                            <h4>Pelatihan Pertolongan Pertama</h4>
+                            <p>Latihan PPGD untuk Anggota Pramuka</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="sosial">
+                        <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sosial">
+                        <div class="gallery-overlay">
+                            <h4>Penghijauan</h4>
+                            <p>Kegiatan Penanaman Pohon di Lingkungan</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 50px;">
+                    <button class="btn" id="loadMore">Muat Lebih Banyak</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <div class="logo-img">
+                            <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="30" cy="30" r="28" stroke="#f8b739" stroke-width="4"/>
+                                <path d="M30 10 L40 25 L35 30 L45 45 L30 40 L15 45 L25 30 L20 25 L30 10Z" fill="#f8b739"/>
+                                <circle cx="30" cy="30" r="8" fill="#ffffff"/>
+                            </svg>
+                        </div>
+                        <div class="logo-text">
+                            <h1>Kwartir Cabang Gerakan Pramuka</h1>
+                            <span>Kota Sibolga</span>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px;">Membina generasi muda Kota Sibolga yang berkarakter, mandiri, dan bertanggung jawab berdasarkan Tri Satya dan Dasa Darma Pramuka.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Tautan Cepat</h3>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="tentang.html">Tentang Kami</a></li>
+                        <li><a href="kegiatan.html">Kegiatan</a></li>
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                        <li><a href="berita.html">Berita</a></li>
+                        <li><a href="kontak.html">Kontak</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Diponegoro No. 12, Kota Sibolga, Sumatera Utara</p>
+                    <p><i class="fas fa-phone"></i> (0631) 22345</p>
+                    <p><i class="fas fa-envelope"></i> kwarcab@sibolgapramuka.id</p>
+                    <p><i class="fas fa-clock"></i> Senin - Jumat: 08:00 - 16:00 WIB</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Kwartir Cabang Gerakan Pramuka Kota Sibolga. All rights reserved.</p>
+                <p>Dibuat dengan semangat Pramuka untuk kemajuan generasi muda Indonesia.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Filter gallery items
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Load more button functionality
+            const loadMoreBtn = document.getElementById('loadMore');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function() {
+                    alert('Fitur "Muat Lebih Banyak" akan menampilkan lebih banyak gambar dari database. Untuk contoh ini, semua gambar sudah ditampilkan.');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
